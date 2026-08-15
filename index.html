@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benedict — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== LOADER ===== -->
+<div class="loader" id="loader">
+  <div class="loader-box">
+    <div class="loader-line"><span class="prompt">&gt;</span> initializing</div>
+    <div class="loader-line"><span class="prompt">&gt;</span> loading <span class="loader-dots"></span></div>
+    <div class="loader-bar">
+      <div class="loader-bar-fill" id="loader-bar-fill"></div>
+    </div>
+  </div>
+</div>
+
+<div class="frame">
+
+  <!-- ===== SIDEBAR (file explorer) ===== -->
+  <aside class="sidebar">
+    
+    <div class="sidebar-top">
+      <span class="dot"></span>
+      <span class="sidebar-name" id="nav-name">benedict/</span>
+    </div>
+
+    <nav class="filetree" id="filetree" aria-label="Portfolio sections">
+      <!-- populated by app.js from data.js -->
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="status-line" id="status-line">// ready</div>
+    </div>
+  </aside>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="content">
+
+    <section id="about" class="pane">
+      <p class="eyebrow">// about</p>
+      <h1 class="name" id="profile-name">—</h1>
+      <p class="role" id="profile-role">—</p>
+      <p class="tagline" id="profile-tagline"></p>
+      <p class="bio" id="profile-bio"></p>
+      <div class="socials" id="profile-socials"></div>
+    </section>
+
+    <section id="skills" class="pane">
+      <p class="eyebrow">// skills</p>
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
+
+    <section id="projects" class="pane">
+      <p class="eyebrow">// projects</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="project-list" id="project-list"></div>
+    </section>
+
+    <section id="experience" class="pane">
+      <p class="eyebrow">// experience</p>
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="contact" class="pane">
+      <p class="eyebrow">// contact</p>
+      <h2 class="section-title">Get in touch</h2>
+      <p class="contact-text" id="contact-text"></p>
+      <div class="socials socials-large" id="contact-socials"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
